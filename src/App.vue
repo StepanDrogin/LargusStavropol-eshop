@@ -1,28 +1,27 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <lap-header/>
+    <lap-nav/>
+    <lap-main-wrapper/>
+    <lap-footer/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import LapMainWrapper from './components/lap-main-wrapper.vue'
+import LapFooter from './components/src/lap-footer.vue'
+import LapHeader from './components/src/lap-header'
+import LapNav from './components/src/lap-nav.vue'
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    LapHeader,
+    LapNav,
+    LapMainWrapper,
+    LapFooter,
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
