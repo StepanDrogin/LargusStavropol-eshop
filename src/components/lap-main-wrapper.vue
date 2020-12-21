@@ -1,5 +1,6 @@
 <template>
     <div class="lap">
+      <lap-header/>
       <div class="lap__wrapper">
       <div class="lap__info">
       <h1 class="lap__info-title">Магазин автозапчастей Largus Auto</h1>
@@ -14,9 +15,10 @@
   </h2>
     <div class="lap__container-list">
    <lap-card
-   v-for="product in products"
+   v-for="product in PRODUCTS"
    :key="product.article"
    :product_data="product"
+   @addToCart="addToCart"
    />
    </div>
  </div>
@@ -25,27 +27,33 @@
  </h2>
  <div class="catalog__items">
  <div class="catalog__item">
+<router-link :to="{name: 'chevrolet'}">
    <img class="catalog__item-img" src="../assets/catalog-car/chevrolet.svg" alt="chevrolet">
 <h3 class="catalog-item-name"> CHEVROLET
   <div class="catalog-item-underline"></div>
 </h3>
 <p class="catalog-item-subtitle">Lanos</p>
 <p class="catalog-item-subtitle">Sens</p>
+</router-link>
  </div>
  <div class="catalog__item">
+<router-link :to="{name: 'daewoo'}">
    <img class="catalog__item-img" src="../assets/catalog-car/daewoo.svg" alt="daewoo">
 <h3 class="catalog-item-name"> DAEWOO
   <div class="catalog-item-underline"></div>
 </h3>
 <p class="catalog-item-subtitle">Nexia</p>
 <p class="catalog-item-subtitle">Matiz</p>
+</router-link>
  </div>
  <div class="catalog__item">
+<router-link :to="{name: 'lada'}">
    <img class="catalog__item-img" src="../assets/catalog-car/lada.svg" alt="lada">
 <h3 class="catalog-item-name"> LADA
   <div class="catalog-item-underline"></div>
   </h3>
   <p class="catalog-item-subtitle">Largus</p>
+</router-link>
  </div>
  </div>
    <h2 class="catalog__title">Наши преимущества
@@ -74,131 +82,38 @@
     </div>
   </div>
 </div>
+<lap-footer/>
 </div>
 </template>
 
 <script>
 import LapCard from './src/lap-card.vue'
+import LapFooter from './src/lap-footer.vue'
+import LapHeader from './src/lap-header.vue'
+import {mapActions, mapGetters} from 'vuex'
 
 export default {
-  components: {LapCard},
+  components: {LapCard, LapHeader,LapFooter},
     name: 'lap-main-wrapper',
-    data() {
-      return {
-          "products": [
-    {
-      image: "1.jpg",
-      name: "Масла",
-      article: "А1"
-    },
-    {
-      image: "2.jpg",
-      name: "Автохимия",
-      article: "А2"
-    },
-    {
-      image: "3.jpg",
-      name: "Аксессуары",
-      article: "А3"
-    },
-    {
-      image: "4.jpg",
-      name: "Выхлопные системы",
-      article: "А4"
-    },
-    {
-      image: "5.jpg",
-      name: "Двигатель",
-      article: "А5"
-    },
-    {
-      image: "6.jpg",
-      name: "Детали кузова",
-      article: "А6"
-    },
-    {
-      image: "7.jpg",
-      name: "Стекла и оптика",
-      article: "А7"
-    },
-    {
-      image: "8.jpg",
-      name: "Отделка салона",
-      article: "А8"
-    },
-    {
-      image: "9.jpg",
-      name: "Отопление/кондиционирование",
-      article: "А9"
-    },
-    {
-      image: "10.jpg",
-      name: "Ремни и ролики",
-      article: "А10"
-    },
-    {
-      image: "11.jpg",
-      name: "Рулевая система",
-      article: "А11"
-    },
-    {
-      image: "12.jpg",
-      name: "Система зажигания",
-      article: "А12"
-    },
-    {
-      image: "13.jpg",
-      name: "Система охлаждения",
-      article: "А13"
-    },
-    {
-      image: "14.jpg",
-      name: "Система питания",
-      article: "А14"
-    },
-    {
-      image: "15.jpg",
-      name: "Стеклоочистители",
-      article: "А15"
-    },
-    {
-      image: "16.jpg",
-      name: "Стеклоподъемники",
-      article: "А16"
-    },
-    {
-      image: "17.jpg",
-      name: "Сцепление",
-      article: "А17"
-    },
-    {
-      image: "18.jpg",
-      name: "Трансмиссия",
-      article: "А18"
-    },
-    {
-      image: "19.jpg",
-      name: "Тормозная система",
-      article: "А19"
-    },
-    {
-      image: "20.jpg",
-      name: "Фильтра",
-      article: "А20"
-    },
-    {
-      image: "21.jpg",
-      name: "Ходовая часть",
-      article: "А21"
-    },
-    {
-      image: "22.jpg",
-      name: "Электрооборудование",
-      article: "А22"
+  data() {
+    return {}
+  },
+  methods: {
+    ...mapActions([
+      'GET_PRODUCTS_FROM_API'
+    ]),
+    addToCart(data) {
+      console.log(data)
     }
-  ]
-      }
-    }
+  },
+  mounted() {
+    this.GET_PRODUCTS_FROM_API()
+  },
+  computed: {
+    ...mapGetters([
+      'PRODUCTS'
+    ])
+  }
 }
 </script>
 
