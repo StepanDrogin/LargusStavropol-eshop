@@ -110,5 +110,47 @@
       "name": "Электрооборудование",
       "article": "А22"
     }
+  ],
+  "chevrolet": [
+    {
+      "image": "1.jpg",
+      "name": "Гайка",
+      "price": "260",
+      "catalogNumber": "96189586",
+      "article": "B1"
+    },
+    {
+      "image": "2.jpg",
+      "name": "Гайка1",
+      "price": "261",
+      "catalogNumber": "96189586",
+      "article": "B2"
+    },
+    {
+      "image": "3.jpg",
+      "name": "Гайка2",
+      "price": "262",
+      "catalogNumber": "96189586",
+      "article": "B3"
+    }
+  ],
+  "daewoo": [
+    {
+      "image": "1.jpg",
+      "name": "Гайка",
+      "price": "260",
+      "catalogNumber": "96189586",
+      "article": "С1"
+    }
+  ],
+  "lada": [
+    {
+      "image": "1.jpg",
+      "name": "Гайка",
+      "price": "260",
+      "catalogNumber": "96189586",
+      "article": "D1"
+    }
   ]
+
 }
