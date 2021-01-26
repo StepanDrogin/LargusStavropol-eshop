@@ -29,9 +29,6 @@ export default {
 }
 </script>
 <style>
-body { 
-    margin: 0px;
-}
 .footer {
     background: #171717;
     color: white;
@@ -63,5 +60,10 @@ body {
     height: 25px;
     width: 25px;
     margin-left: 5px;
+}
+@media (max-width: 320px) {
+ .footer {
+     flex-direction: column;
+ }
 }
 </style>

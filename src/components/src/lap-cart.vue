@@ -1,5 +1,11 @@
 <template>
     <div class="lap__cart">
+        <card-popup
+      v-if="isCardPopupVisible"
+      @closeCardPopup="closeCardPopup">
+
+        </card-popup>
+
             <div class="lap__container">
                 <h1 class="cart__title">Ваша корзина</h1>
                 <p class="lap__description" v-if="!cart_data.length">Ваша корзина на данный момент пуста</p>
@@ -17,7 +23,9 @@
             <div class="lap__total">
                 <p class="lap__total-count">Итого: {{cartTotalCost}} &#8381;</p>
             </div>
-            <button class="lap__button-buy">Оформить заказ</button>
+            <button class="lap__button-buy"
+            @click="showPopupCard"
+            >Оформить заказ</button>
         </div>
     </div>
 </template>
@@ -25,8 +33,9 @@
 <script>
 import lapCartItem from './lap-cart-item.vue'
 import {mapGetters, mapActions} from 'vuex'
+import CardPopup from '../popup/card-popup.vue'
 export default {
-  components: { lapCartItem },
+  components: { lapCartItem, CardPopup },
     name: 'lap-cart',
     computed: {
         ...mapGetters([
@@ -34,6 +43,11 @@ export default {
         ]),
         cartTotalCost() {
             return this.cart_data.reduce((res, item) => res + item.price * item.quantity, 0)
+        }
+    },
+    data() {
+        return {
+            isCardPopupVisible: false,
         }
     },
     props: {
@@ -58,23 +72,66 @@ export default {
         },
         deleteFromCart(index) {
             this.DELETE_FROM_CART(index)
+        },
+        showPopupCard() {
+            this.isCardPopupVisible = true;
+        },
+        closeCardPopup() {
+            this.isCardPopupVisible = false;
         }
     }
 }
 </script>
 
 <style>
+.cart__title {
+    font-style: normal;
+    font-weight: 750;
+    font-size: 42px;
+}
+.lap__description {
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+}
 .lap__bottom{
     display: flex;
     justify-content: space-between;
-    margin: 150px auto 500px;
+    margin: 200px auto;
     max-width: 70%;
-    width: 100%;
 }
 .lap__button-buy {
     background: #171717;
     border-radius: 4px;
     color: #FDFDFD;
     padding: 15px 40px;
+    font-weight: 750;
+    font-size: 24px;
+    line-height: 29px;
+    height: 70px;
+    margin-top: 20px;
+}
+.lap__total-count{
+    font-size: 32px;
+}
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+.lap__bottom {
+    flex-direction: column;
+}
+.lap__button-buy {
+    height: 100px;
+    padding: 0px;
+}
+}
+
+@media (max-width: 320px) {
+.lap__bottom {
+    flex-direction: column;
+}
+.lap__button-buy {
+    height: 100px;
+    padding: 0px;
+}
 }
 </style>

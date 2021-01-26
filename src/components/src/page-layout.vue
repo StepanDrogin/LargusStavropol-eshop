@@ -17,3 +17,6 @@ export default {
     name: 'page-layout'
 }
 </script>
+
+<style>
+</style>

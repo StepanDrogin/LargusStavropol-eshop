@@ -1,40 +1,111 @@
 <template>
             <div class="lap__category">
-          <h2 class="lap__items">Категории товаров</h2>
-          <p class="lap__item">Все товары</p>
-          <p class="lap__item">Выхлопная система</p>
-          <p class="lap__item">Двигатель</p>
-          <p class="lap__item">Детали кузова</p>
-          <p class="lap__item">Оптика и стёкла</p>
-          <p class="lap__item">Отделка салона</p>
-          <p class="lap__item">Отопление и кондиционирование</p>
-          <p class="lap__item">Ремни и ролики</p>
-          <p class="lap__item">Рулевая система</p>
-          <p class="lap__item">Система зажигания</p>
-          <p class="lap__item">Система охлаждения</p>
-          <p class="lap__item">Система питания</p>
-          <p class="lap__item">Стеклоочиститель и стекломыватель</p>
-          <p class="lap__item">Стеклоподъемники</p>
-          <p class="lap__item">Сцепление и трансмиссия</p>
-          <p class="lap__item">Тормозная система</p>
-          <p class="lap__item">Фильтра</p>
-          <p class="lap__item">Ходовая часть(подвеска)</p>
-          <p class="lap__item">Электрооборудование</p>
-        </div>
+          <h2 class="lap__item_title"
+          @click="areOptionsVisible = !areOptionsVisible"
+          >{{selected}}</h2>
+            <div class="options"
+            v-if="areOptionsVisible"
+            >
+                <p class="lap__item_category"
+                v-for="option in options"
+                :key="option.value"
+                @click="selectOption(option)"
+                >
+                {{option.name}}
+                </p>
+            </div>
+            </div>
 </template>
 <script>
 export default {
-    name: 'lap-part-category'
+    name: 'lap-part-category',
+    props: {
+        options: {
+            type: Array,
+            default() {
+                return []
+            }
+        },
+        selected: {
+            type: String,
+            default: ''
+        }
+    },
+    data() {
+        return {
+            areOptionsVisible: false
+        }
+    },
+    methods: {
+        selectOption(option) {
+            this.$emit('select', option),
+            this.areOptionsVisible = false
+        }
+    }
 }
 </script>
 <style>
 .lap__category {
     margin-right: 45px;
+    
 }
-.lap__item {
+.lap__item_title {
     border: 1px solid #383838;
 box-sizing: border-box;
 border-radius: 4px;
 padding: 10px 5px;
+min-width: 375px;
+font-weight: 450;
+font-size: 24px;
+    cursor: pointer;
+}
+.lap__item_category {
+    border: 1px solid #383838;
+box-sizing: border-box;
+border-radius: 4px;
+padding: 10px 5px;
+min-width: 375px;
+font-size: 15px;
+line-height: 18px;
+    cursor: pointer;
+}
+.lap__item_category:hover {
+    background: #E83C26;;
+	color: white;
+	box-shadow: inset 0 0 0 3px #E83C26;;
+}
+.lap__item_title:hover {
+    background: #E83C26;;
+	color: white;
+	box-shadow: inset 0 0 0 3px #E83C26;;
+}
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+        .lap__item_title {
+        margin:0px
+    }
+    .lap__item_category {
+        min-width: 25%;
+    }
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+    .lap__item_title {
+        margin:0px
+    }
+    .lap__item_category {
+        min-width: 25%;
+    }
+}
+
+@media (max-width: 320px) {
+    .lap__item_title {
+        min-width: 230px;
+        margin:0px
+    }
+    .lap__item_category {
+        min-width: 25%;
+    }
 }
 </style>

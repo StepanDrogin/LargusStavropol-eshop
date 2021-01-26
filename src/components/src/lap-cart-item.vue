@@ -12,7 +12,7 @@
                 <button class="cart__counter-increment" @click="incrementItem">+</button>
             </div>
             <div class="cart__price-and-delete">
-                <p class="cart__item-price">{{cart_item_data.price}}</p>
+                <p class="cart__item-price">{{cart_item_data.price}} &#8381;</p>
                 <button class="cart__item-delete" @click="deleteFromCart">&#128465;&#65039;</button>
             </div>
             </div>
@@ -33,9 +33,6 @@ export default {
     },
     data() {
         return {}
-    },
-        mounted() {
-        this.$set(this.cart_item_data, 'quantity', 1)
     },
     methods: {
         deleteFromCart() {
@@ -76,5 +73,31 @@ padding: 0px 20px;
 }
 .cart__item-price {
     margin: 0px 15px;
+}
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+.cart__container {
+    flex-direction: column;
+}
+.cart__price-and-delete {
+    justify-content: center;
+}
+.cart__counter {
+    justify-content: center;
+    margin: 0px;
+}
+}
+
+@media (max-width: 320px) {
+.cart__container {
+    flex-direction: column;
+}
+.cart__price-and-delete {
+    justify-content: center;
+}
+.cart__counter {
+    justify-content: center;
+    margin: 0px;
+}
 }
 </style>

@@ -21,7 +21,7 @@ export default {
 </script>
 <style>
 .lap__cards {
- padding: 15px 55px 0px;
+ padding: 0px 40px 0px;
 }
 .lap__card{
     box-shadow: 0 0 8px 0;
@@ -36,6 +36,9 @@ export default {
     padding: 15px 0px 15px;
     box-sizing: border-box;
     text-align: center;
+    font-style: normal;
+    font-weight: 450;
+    font-size: 19px;
 }
 .lap__card-image{
     height: 210px;
