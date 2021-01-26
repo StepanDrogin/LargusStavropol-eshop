@@ -6,6 +6,7 @@ Vue.use(Vuex);
 
 let store = new Vuex.Store({
     state: {
+        searchValue: '',
         products: [],
         cart: [],
         chevrolet: [],
@@ -13,6 +14,9 @@ let store = new Vuex.Store({
         lada: []
     },
     mutations: {
+        SET_SEARCH_VALUE_TO_VUEX: (state, value) => {
+            state.searchValue = value;
+        },
         SET_PRODUCTS_TO_STATE: (state, products) => {
             state.products = products;
         },
@@ -54,6 +58,9 @@ let store = new Vuex.Store({
         },
     },
     actions: {
+        GET_SEARCH_VALUE_TO_VUEX({commit}, value) {
+            commit('SET_SEARCH_VALUE_TO_VUEX', value)
+        },
         GET_PRODUCTS_FROM_API({commit}) {
             return Axios('http://localhost:3000/products', {
                 method: "GET"
@@ -120,6 +127,9 @@ let store = new Vuex.Store({
         }
     },
     getters: {
+        SEARCH_VALUE(state) {
+            return state.searchValue;
+        },
         PRODUCTS(state) {
             return state.products;
         },
