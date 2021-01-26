@@ -2,13 +2,15 @@
     <div class="lap">
       <lap-header/>
       <div class="lap__wrapper">
+        <div class="lap__info-wrapper">
       <div class="lap__info">
       <h1 class="lap__info-title">Магазин автозапчастей Largus Auto</h1>
       <p class="lap__info-subtitle">Качественные автозапчасти по низким ценам напрямую от производителей.</p>
-      <p class="lap__info-button">В КАТАЛОГ</p>
+      <a href="#catalog__ancher"><p class="lap__info-button">В КАТАЛОГ</p></a>
       </div>
       <img class="lap__image" src="../assets/main-page/largus.png" alt="largus-image">
     </div>
+</div>
 <div class="lap__container">
   <h2 class="lap__container-products">Товары
     <div class="lap__container-underline"></div>
@@ -23,7 +25,7 @@
    </div>
  </div>
  <div class="lap__container">
- <h2 class="catalog__title">Каталог автозапчастей <div class="catalog__title-underline"></div>
+ <h2 id="catalog__ancher" class="catalog__title">Каталог автозапчастей <div class="catalog__title-underline"></div>
  </h2>
  <div class="catalog__items">
  <div class="catalog__item">
@@ -59,7 +61,7 @@
    <h2 class="catalog__title">Наши преимущества
     <div class="catalog__title-underline"></div>
   </h2>
-  <div class="advantages">
+  <div id="advantages__anchor" class="advantages">
     <div class="advantages__item">
       <img src="../assets/advantages-img/exp.svg" alt="exp" class="advantages__item-img">
       <h4 class="advantages__title">Опыт</h4>
@@ -120,6 +122,7 @@ export default {
 <style>
 body {
   margin: 0px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .lap__wrapper {
   margin: auto;
@@ -128,12 +131,16 @@ body {
   display: flex;
   justify-content: center;
 }
+.lap__info-wrapper {
+  display: flex;
+  max-width: 75%;
+}
 .lap__image {
   max-height: 450px;
   margin-top: 50px;
 }
 .lap__info {
-  margin: 120px 200px 150px 200px;
+  margin: 100px;
   max-width: 400px;
 }
 .lap__info-button {
@@ -142,9 +149,18 @@ body {
   border-radius: 4px;
   padding: 10px 25px 10px;
   display: inline;
+  font-weight: 450;
+  font-size: 24px;
+}
+.lap__info-button:hover {
+  background: #E83C26;
+	color: white;
+	box-shadow: inset 0 0 0 3px #E83C26;
+  transition: all 0.3s ease;
 }
 .lap__info-subtitle {
-  margin: 15px 0px 30px;
+  margin: 15px 0px 75px;
+  font-size: 24px;
 }
 .lap__container {
     margin: 0 auto;
@@ -155,20 +171,32 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
+.lap__info-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 39px;
+}
 .lap__container-products {
-  margin: 80px 0px;
+  margin: 80px 40px;
+    font-style: normal;
+  font-weight: 750;
+  font-size: 42px;
 }
 .lap__container-underline {
-  max-width: 100px;
+  max-width: 175px;
   margin: 6px 0px 25px;
   border: 1px solid #E83C26;
 }
 .catalog__title {
   text-align: center;
-  margin: 134px;
+  margin-top: 200px;
+  margin-bottom: 134px;
+  font-style: normal;
+  font-weight: 750;
+  font-size: 42px;
 }
 .catalog__title-underline {
-  max-width: 175px;
+  max-width: 250px;
   margin: 6px 0px 25px;
   border: 1px solid #E83C26;
   margin: 22px auto 48px;
@@ -202,6 +230,9 @@ color: white;
 .advantages {
   display: flex;
   margin: 0 auto 160px;
+  font-style: normal;
+  font-weight: 750;
+  font-size: 42px;
 }
 .advantages__item {
   text-align: center;
@@ -210,5 +241,249 @@ color: white;
 .advantages__subtitle {
   max-width: 200px;
   margin: 0 auto;
+  font-weight: normal;
+font-size: 20px;
+line-height: 25px;
+}
+.advantages__title {
+  font-style: normal;
+font-weight: 450;
+font-size: 28px;
+}
+@media (min-width: 1200px) {
+ .burger {
+     display: none;
+ }
+ .lap__info-wrapper {
+   max-width: 100%;
+ }
+ .lap__cards {
+   margin: 18px;
+   padding: 0px;
+ }
+ .lap__image {
+   max-height: 430px;
+ }
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+ .burger {
+     display: none;
+ }
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+ .burger {
+     display: none;
+ }
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+    .lap__info-wrapper {
+      display: flex;
+      flex-direction: column;
+      margin-left: 10%;
+  }
+  .lap__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .lap__info {
+    margin: 0px;
+    display: block;
+    max-width: 275px;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .lap__info-button {
+    margin-left: 43px;
+  }
+  .lap__info-title {
+    display: block;
+    width: 280px;
+    font-size: 21px;
+    text-align: center;
+  }
+  .lap__info-subtitle {
+    display: flex;
+    width: 280px;
+    text-align: center;
+  }
+  .lap__cards {
+    padding: 0px;
+  }
+  .lap__card {
+    margin: 10px;
+  }
+  .lap__container-products {
+    font-size: 2em;
+  }
+  .catalog__title {
+    font-size: 2em;
+  }
+  .lap__container-list {
+    justify-content: center;
+  }
+  .catalog__items {
+    flex-direction: column;
+  }
+  .catalog__item {
+    margin-top: 45px;
+    width: 230px;
+  }
+  .advantages {
+    flex-direction: column;
+  }
+  .advantages__item {
+    margin-top: 15px;
+  }
+  .advantages__title {
+    margin: 15px;
+  }
+  .advantages__item-img {
+    margin-top: 15px;
+  }
+      .lap__container {
+        margin: 0px 15%;
+    }
+}
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+  .lap__info-wrapper {
+      display: flex;
+      flex-direction: column;
+      margin-left: 15%;
+  }
+  .lap__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .lap__info {
+    margin: 0px;
+    display: block;
+    max-width: 275px;
+  }
+  .lap__image {
+    max-height: 180px;
+  }
+  .lap__info-button {
+    margin-left: 43px;
+  }
+  .lap__info-title {
+    display: block;
+    width: 280px;
+    font-size: 21px;
+    text-align: center;
+  }
+  .lap__info-subtitle {
+    display: flex;
+    width: 280px;
+    text-align: center;
+  }
+  .lap__cards {
+    padding: 0px;
+  }
+  .lap__container-products {
+    font-size: 2em;
+  }
+  .catalog__title {
+    font-size: 2em;
+  }
+  .lap__container-list {
+    justify-content: center;
+  }
+  .catalog__items {
+    flex-direction: column;
+  }
+  .catalog__item {
+    margin-top: 15px;
+    width: 230px;
+  }
+  .advantages {
+    flex-direction: column;
+  }
+  .advantages__item {
+    margin-top: 15px;
+  }
+  .advantages__title {
+    margin: 15px;
+  }
+  .advantages__item-img {
+    margin-top: 15px;
+  }
+      .lap__container {
+        margin: 0px 15%;
+    }
+}
+
+@media (max-width: 320px) {
+  .footer {
+    flex-direction: column;
+  }
+  .lap__info-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  }
+  .lap__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .lap__info {
+    margin: 0px;
+    display: block;
+    max-width: 275px;
+  }
+  .lap__image {
+    max-height: 180px;
+  }
+  .lap__info-button {
+    margin-left: 0px;
+  }
+  .lap__info-title {
+    display: block;
+    width: 180px;
+    font-size: 21px;
+    text-align: center;
+  }
+  .lap__info-subtitle {
+    display: flex;
+    width: 180px;
+    text-align: center;
+  }
+  .lap__cards {
+    padding: 0px;
+  }
+  .lap__container-products {
+    font-size: 2em;
+  }
+  .catalog__title {
+    font-size: 2em;
+  }
+  .catalog__items {
+    flex-direction: column;
+  }
+  .catalog__item {
+    margin-top: 15px;
+    width: 230px;
+  }
+  .advantages {
+    flex-direction: column;
+  }
+  .advantages__item {
+    margin-top: 15px;
+  }
+  .advantages__title {
+    margin: 15px;
+  }
+  .advantages__item-img {
+    margin-top: 15px;
+  }
+      .lap__container {
+        margin: 0px 10%;
+    }
 }
 </style>
