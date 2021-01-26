@@ -12,7 +12,7 @@
     },
     {
       "image": "3.jpg",
-      "name": "Аксессуары,",
+      "name": "Аксессуары",
       "article": "А3"
     },
     {
@@ -114,42 +114,127 @@
   "chevrolet": [
     {
       "image": "1.jpg",
-      "name": "Гайка",
+      "name": "Выхлопная система",
       "price": "260",
       "catalogNumber": "96189586",
+      "category": "Выхлопная система",
       "article": "B1"
     },
     {
       "image": "2.jpg",
-      "name": "Гайка1",
+      "name": "Двигатель",
       "price": "261",
       "catalogNumber": "96189586",
+      "category": "Двигатель",
       "article": "B2"
     },
     {
-      "image": "3.jpg",
-      "name": "Гайка2",
-      "price": "262",
+      "image": "1.jpg",
+      "name": "Детали кузова",
+      "price": "260",
+      "category": "Детали кузова",
       "catalogNumber": "96189586",
       "article": "B3"
+    },
+    {
+      "image": "2.jpg",
+      "name": "Оптика и стекла",
+      "price": "261",
+      "catalogNumber": "96189586",
+      "category": "Оптика и стекла",
+      "article": "B4"
+    },
+    {
+      "image": "3.jpg",
+      "name": "Отделка салона",
+      "price": "262",
+      "catalogNumber": "96189586",
+      "category": "Отделка салона",
+      "article": "B5"
     }
   ],
   "daewoo": [
     {
       "image": "1.jpg",
-      "name": "Гайка",
+      "name": "Выхлопная система",
       "price": "260",
       "catalogNumber": "96189586",
+      "category": "Выхлопная система",
       "article": "С1"
+    },
+    {
+      "image": "1.jpg",
+      "name": "Двигатель",
+      "price": "260",
+      "catalogNumber": "96189586",
+      "category": "Двигатель",
+      "article": "С2"
+    },
+    {
+      "image": "1.jpg",
+      "name": "Детали кузова",
+      "price": "260",
+      "catalogNumber": "96189586",
+      "category": "Детали кузова",
+      "article": "С3"
+    },
+    {
+      "image": "1.jpg",
+      "name": "Оптика и стекла",
+      "price": "260",
+      "catalogNumber": "96189586",
+      "category": "Оптика и стекла",
+      "article": "С4"
+    },
+    {
+      "image": "1.jpg",
+      "name": "Отделка салона",
+      "price": "260",
+      "catalogNumber": "96189586",
+      "category": "Отделка салона",
+      "article": "С5"
     }
   ],
   "lada": [
     {
       "image": "1.jpg",
-      "name": "Гайка",
+      "name": "Выхлопная система",
       "price": "260",
       "catalogNumber": "96189586",
+      "category": "Выхлопная система",
       "article": "D1"
+    },
+    {
+      "image": "1.jpg",
+      "name": "Двигатель",
+      "price": "260",
+      "catalogNumber": "96189586",
+      "category": "Двигатель",
+      "article": "D2"
+    },
+    {
+      "image": "1.jpg",
+      "name": "Детали кузова",
+      "price": "260",
+      "catalogNumber": "96189586",
+      "category": "Детали кузова",
+      "article": "D3"
+    },
+    {
+      "image": "1.jpg",
+      "name": "Оптика и стекла",
+      "price": "260",
+      "catalogNumber": "96189586",
+      "category": "Оптика и стекла",
+      "article": "D4"
+    },
+    {
+      "image": "1.jpg",
+      "name": "Отделка салона",
+      "price": "260",
+      "catalogNumber": "96189586",
+      "category": "Отделка салона",
+      "article": "D5"
     }
   ]
 
