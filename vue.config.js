@@ -6,4 +6,20 @@ module.exports = {
             },
         },
     },
+
+    pluginOptions: {
+      prerenderSpa: {
+        registry: undefined,
+        renderRoutes: [
+          '/',
+          '/chevrolet',
+          '/daewoo',
+          '/lada',
+          '/cart'
+        ],
+        useRenderEvent: true,
+        headless: true,
+        onlyProduction: true
+      }
+    }
 };

@@ -1,7 +1,7 @@
 <template>
 <div class="popup__wrapper" ref="popup__wrapper">
     <div class="lap-popup" >
-        <div class="lap-popup__header" >
+        <div class="lap-popup__header">
             <span>Подробное описание товара</span>
             <span>
                 <i class="material-icons"
