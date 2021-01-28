@@ -94,6 +94,7 @@ export default {
     .nav__menu-search {
     width: 25px;
     height: 25px;
+    margin-top: 15px;
   }
     .lap__item_title {
     min-width: 150px;
@@ -115,6 +116,7 @@ export default {
   .nav__menu-search {
     width: 25px;
     height: 25px;
+    margin-top: 15px;
   }
 }
 </style>
