@@ -176,6 +176,12 @@ a {
   /* progress bar */
   background-color: red !important;
 }
+.bm-menu {
+  color: white;
+}
+.bm-overlay {
+  background: white;
+}
 /* Large desktops and laptops */
 @media (min-width: 1200px) {
   .burger {
@@ -240,12 +246,6 @@ a {
   .header__info {
     display: block;
   }
-.bm-menu {
-  color: white;
-}
-.bm-overlay {
-  background: white;
-}
   .nav__menu {
     display: none;
   }
