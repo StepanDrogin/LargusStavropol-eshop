@@ -103,18 +103,6 @@
         </div>
         <div class="advantages__item">
           <img
-            src="../assets/advantages-img/tool-box.svg"
-            alt="tool-box"
-            class="advantages__item-img"
-          />
-          <h4 class="advantages__title">Оборудование</h4>
-          <p class="advantages__subtitle">
-            Современное оборудование позволяет нам быстро диагностировать и
-            решить проблему
-          </p>
-        </div>
-        <div class="advantages__item">
-          <img
             src="../assets/advantages-img/best-price.svg"
             alt="best-price"
             class="advantages__item-img"
@@ -282,6 +270,7 @@ body {
   font-style: normal;
   font-weight: 750;
   font-size: 42px;
+  justify-content: space-around;
 }
 .advantages__item {
   text-align: center;

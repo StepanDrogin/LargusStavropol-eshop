@@ -147,7 +147,6 @@ export default {
 }
 .nav__menu-wrapper {
   display: flex;
-  flex-direction: column;
 }
 .nav__menu-search {
   margin-left: 10px;
