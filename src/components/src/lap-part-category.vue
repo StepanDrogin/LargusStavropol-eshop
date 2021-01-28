@@ -104,5 +104,9 @@ export default {
   .lap__item_category {
     min-width: 25%;
   }
+  .nav__menu-search {
+    width: 25px;
+    height: 25px;
+  }
 }
 </style>

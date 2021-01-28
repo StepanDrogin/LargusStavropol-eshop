@@ -243,6 +243,9 @@ a {
 .bm-menu {
   color: white;
 }
+.bm-overlay {
+  background: white;
+}
   .nav__menu {
     display: none;
   }
