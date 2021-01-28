@@ -249,6 +249,9 @@ a {
   .nav__menu {
     display: none;
   }
+  .nav__menu-item {
+    color: white;
+  }
   .burger {
     position: fixed;
     margin-left: 100%;
