@@ -215,6 +215,9 @@ a {
     position: fixed;
     margin-left: 100%;
   }
+  .nav__menu-item {
+    color: white !important;
+  }
   .bm-menu {
     background: floralwhite;
   }
@@ -234,6 +237,9 @@ a {
     position: fixed;
     margin-left: 100%;
   }
+  .nav__menu-item {
+    color: white !important;
+  }
   .bm-menu {
     background: floralwhite;
   }
@@ -250,7 +256,7 @@ a {
     display: none;
   }
   .nav__menu-item {
-    color: white;
+    color: white !important;
   }
   .burger {
     position: fixed;
