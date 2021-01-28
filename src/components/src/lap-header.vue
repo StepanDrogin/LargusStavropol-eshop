@@ -177,10 +177,10 @@ a {
   background-color: red !important;
 }
 .bm-menu {
-  color: white;
+  color: white !important;
 }
 .bm-overlay {
-  background: white;
+  background: white !important;
 }
 /* Large desktops and laptops */
 @media (min-width: 1200px) {
