@@ -240,6 +240,9 @@ a {
   .header__info {
     display: block;
   }
+.bm-menu {
+  color: white;
+}
   .nav__menu {
     display: none;
   }

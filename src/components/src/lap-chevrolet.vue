@@ -6,7 +6,9 @@
           Запчасти для Chevrolet Lanos (с 2005г. - 2009г.) / Chevrolet Sens (с
           2004г. - 2009г.)
         </h1>
+
         <div class="nav__menu-block">
+          <div class="nav__menu-wrapper">
           <input
             type="text"
             class="nav__menu-field"
@@ -20,6 +22,7 @@
             alt="shop-search"
             @click="search(searchValue)"
           />
+      </div>
         </div>
         <router-link to="/">
           <p class="lap__back-to">&larr; Выбрать другую машину</p>
@@ -142,6 +145,10 @@ export default {
   display: flex;
   padding: 10px;
 }
+.nav__menu-wrapper {
+  display: flex;
+  flex-direction: column;
+}
 .nav__menu-search {
   margin-left: 10px;
   cursor: pointer;
@@ -157,5 +164,14 @@ export default {
 }
 .lap__back-to {
   color: #171717;
+}
+@media (max-width: 320px) {
+.nav__menu-search {
+  margin-top: 15px;
+}
+.nav__menu-wrapper {
+  display: flex;
+  flex-direction: column;
+}
 }
 </style>

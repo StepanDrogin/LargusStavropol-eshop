@@ -3,6 +3,7 @@
     <div class="lap__container">
       <h1 class="lap__title">Запчасти для Lada Largus (c 2012г.)</h1>
       <div class="nav__menu-block">
+        <div class="nav__menu-wrapper">
         <input
           type="text"
           class="nav__menu-field"
@@ -16,6 +17,7 @@
           alt="shop-search"
           @click="search(searchValue)"
         />
+      </div>
       </div>
       <router-link to="/">
         <p class="lap__back-to">&larr; Выбрать другую машину</p>
@@ -134,13 +136,6 @@ export default {
 </script>
 
 <style>
-.nav__menu-block {
-  display: flex;
-  padding: 10px;
-}
-.nav__menu-search {
-  margin-left: 10px;
-}
 .lada__parts-wrapper {
   display: flex;
   margin-bottom: 100px;
@@ -152,5 +147,14 @@ export default {
 }
 .lap__back-to {
   color: #171717;
+}
+@media (max-width: 320px) {
+.nav__menu-search {
+  margin-top: 15px;
+}
+.nav__menu-wrapper {
+  display: flex;
+  flex-direction: column;
+}
 }
 </style>

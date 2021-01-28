@@ -98,7 +98,7 @@ export default {
 
 @media (max-width: 320px) {
   .lap__item_title {
-    min-width: 230px;
+    min-width: 150px;
     margin: 0px;
   }
   .lap__item_category {

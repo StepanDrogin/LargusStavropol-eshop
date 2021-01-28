@@ -7,6 +7,7 @@
           - 2015г.)
         </h1>
         <div class="nav__menu-block">
+        <div class="nav__menu-wrapper">
           <input
             type="text"
             class="nav__menu-field"
@@ -20,6 +21,7 @@
             alt="shop-search"
             @click="search(searchValue)"
           />
+        </div>
         </div>
         <router-link to="/">
           <p class="lap__back-to">&larr; Выбрать другую машину</p>
@@ -152,11 +154,13 @@ export default {
 .lap__back-to {
   color: #171717;
 }
-.nav__menu-block {
-  display: flex;
-  padding: 10px;
-}
+@media (max-width: 320px) {
 .nav__menu-search {
-  margin-left: 10px;
+  margin-top: 15px;
+}
+.nav__menu-wrapper {
+  display: flex;
+  flex-direction: column;
+}
 }
 </style>
