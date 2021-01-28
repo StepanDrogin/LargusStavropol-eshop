@@ -91,6 +91,14 @@ export default {
   .lap__item_title {
     margin: 0px;
   }
+    .nav__menu-search {
+    width: 25px;
+    height: 25px;
+  }
+    .lap__item_title {
+    min-width: 150px;
+    margin: 0px;
+  }
   .lap__item_category {
     min-width: 25%;
   }
