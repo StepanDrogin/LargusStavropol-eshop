@@ -1,11 +1,6 @@
 {
   "products": [
     {
-      "image": "1.jpg",
-      "name": "Масла",
-      "article": "А1"
-    },
-    {
       "image": "2.jpg",
       "name": "Автохимия",
       "article": "А2"
