@@ -7,7 +7,7 @@
     <div class="footer__info">
       <div class="footer__info-phone">
         <img src="../../assets/img-header/phone-call.svg" alt="phone-call" />
-        <a class="footer__info-subtitle" href="+79097699642">+7 (909) 769-96-42</a>
+        <a class="footer__info-subtitle" href="+7 (909) 769-96-42">+7 (909) 769-96-42</a>
       </div>
       <div class="footer__info-geo">
         <img src="../../assets/img-header/gps-icon.svg" alt="gps-icon" />
