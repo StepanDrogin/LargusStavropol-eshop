@@ -28,7 +28,7 @@
     <div class="header__info">
       <div class="header__info-phone">
         <img src="../../assets/img-header/phone-call.svg" alt="phone-call" />
-        <a class="header__info" href="+79097699642">+7 (909) 769-96-42</a>
+        <a class="header__info" href="tel:+79097699642">+7 (909) 769-96-42</a>
       </div>
       <div class="header__info-geo">
         <img src="../../assets/img-header/gps-icon.svg" alt="gps-icon" />
