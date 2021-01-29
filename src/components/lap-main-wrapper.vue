@@ -109,7 +109,7 @@
           />
           <h4 class="advantages__title">Цены</h4>
           <p class="advantages__subtitle">
-            Стоимость выполняемых работ доступна каждому автовладельцу
+            Стоимость запчастей доступна каждому автовладельцу
           </p>
         </div>
         <div class="advantages__item">
@@ -120,7 +120,7 @@
           />
           <h4 class="advantages__title">Гарантия</h4>
           <p class="advantages__subtitle">
-            Мы даем гарантию на все виды наших работ
+            Мы даем гарантию на все виды наших запчастей
           </p>
         </div>
       </div>

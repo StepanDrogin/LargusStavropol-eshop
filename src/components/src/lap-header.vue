@@ -28,7 +28,7 @@
     <div class="header__info">
       <div class="header__info-phone">
         <img src="../../assets/img-header/phone-call.svg" alt="phone-call" />
-        <p class="header__info">+7 (909) 769-96-42</p>
+        <a class="header__info" href="+79097699642">+7 (909) 769-96-42</a>
       </div>
       <div class="header__info-geo">
         <img src="../../assets/img-header/gps-icon.svg" alt="gps-icon" />
@@ -38,7 +38,7 @@
       </div>
       <div class="header__info-time">
         <img src="../../assets/img-header/time-icon.svg" alt="time-icon" />
-        <p class="header__info">Мы открыты с 9.00 - 17.00</p>
+        <p class="header__info">Мы открыты с 9.00 - 18.00</p>
       </div>
     </div>
     <div class="nav__menu">
@@ -160,6 +160,7 @@ a {
 }
 .header__info-phone {
   display: flex;
+  align-items: center;
 }
 .header__info-geo {
   display: flex;

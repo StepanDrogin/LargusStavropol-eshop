@@ -71,7 +71,7 @@ export default {
     position: fixed;
     width: 550px;
     background: #ffffff;
-    box-shadow: 0px 0 20px 15px #413b3b;
+    box-shadow: 0px 0 10px 3px #413b3b;
     z-index: 10;
 }
 .lap-popup__header {
