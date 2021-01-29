@@ -23,7 +23,7 @@
     <div class="lap__container">
       <h2 class="lap__container-products">
         Товары
-        <div class="lap__container-underline"></div>
+        <span class="lap__container-underline"></span>
       </h2>
       <div class="lap__container-list">
         <lap-card
@@ -37,7 +37,7 @@
     <div class="lap__container">
       <h2 id="catalog__ancher" class="catalog__title">
         Каталог автозапчастей
-        <div class="catalog__title-underline"></div>
+        <span class="catalog__title-underline"></span>
       </h2>
       <div class="catalog__items">
         <div class="catalog__item">
@@ -49,7 +49,7 @@
             />
             <h3 class="catalog-item-name">
               CHEVROLET
-              <div class="catalog-item-underline"></div>
+              <span class="catalog-item-underline"></span>
             </h3>
             <p class="catalog-item-subtitle">Lanos</p>
             <p class="catalog-item-subtitle">Sens</p>
@@ -64,7 +64,7 @@
             />
             <h3 class="catalog-item-name">
               DAEWOO
-              <div class="catalog-item-underline"></div>
+              <span class="catalog-item-underline"></span>
             </h3>
             <p class="catalog-item-subtitle">Nexia</p>
             <p class="catalog-item-subtitle">Matiz</p>
@@ -79,7 +79,7 @@
             />
             <h3 class="catalog-item-name">
               LADA
-              <div class="catalog-item-underline"></div>
+              <span class="catalog-item-underline"></span>
             </h3>
             <p class="catalog-item-subtitle">Largus</p>
           </router-link>
@@ -87,7 +87,7 @@
       </div>
       <h2 class="catalog__title">
         Наши преимущества
-        <div class="catalog__title-underline"></div>
+        <span class="catalog__title-underline"></span>
       </h2>
       <div id="advantages__anchor" class="advantages">
         <div class="advantages__item">
@@ -223,6 +223,7 @@ body {
   max-width: 175px;
   margin: 6px 0px 25px;
   border: 1px solid #e83c26;
+  display: block;
 }
 .catalog__title {
   text-align: center;
@@ -237,11 +238,13 @@ body {
   margin: 6px 0px 25px;
   border: 1px solid #e83c26;
   margin: 22px auto 48px;
+  display: block;
 }
 .catalog-item-underline {
   max-width: 100px;
   margin: 6px auto 16px;
   border: 1px solid white;
+  display: block;
 }
 .catalog__items {
   display: flex;
