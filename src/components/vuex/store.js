@@ -62,7 +62,7 @@ let store = new Vuex.Store({
       commit("SET_SEARCH_VALUE_TO_VUEX", value);
     },
     GET_PRODUCTS_FROM_API({ commit }) {
-      return Axios("https://my-json-server.typicode.com/StepanDrogin/fake-api/products", {
+      return Axios("https://my-json-server.typicode.com/StepanDrogin/fake-api-2/products", {
         method: "GET",
       })
         .then((products) => {
@@ -88,7 +88,7 @@ let store = new Vuex.Store({
         });
     },
     GET_LADA_FROM_API({ commit }) {
-      return Axios("https://my-json-server.typicode.com/StepanDrogin/fake-api/lada", {
+      return Axios("https://my-json-server.typicode.com/StepanDrogin/fake-api-2/lada", {
         method: "GET",
       })
         .then((lada) => {
