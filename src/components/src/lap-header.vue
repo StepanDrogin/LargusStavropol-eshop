@@ -1,6 +1,5 @@
 <template>
   <div class="header">
-    <VueScrollProgress></VueScrollProgress>
     <Slide class="burger" right>
       <router-link class="ancher" :to="{ name: 'mainPage' }">
         <p class="nav__menu-item">Главная</p>
