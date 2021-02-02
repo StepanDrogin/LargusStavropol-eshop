@@ -6,7 +6,11 @@
           Запчасти для Chevrolet Lanos (с 2005г. - 2009г.) / Chevrolet Sens (с
           2004г. - 2009г.)
         </h1>
-
+        <p class="lap__subtitlle">На сайте представлен не весь ассортимент, позвоните нам для уточнения интересующей вас запчасти! </p>
+        <div class="header__info-phone--white">
+        <img src="../../assets/img-header/phone-call.svg" alt="phone-call" />
+        <a class="header__info--white" href="tel:+79097699642">+7 (909) 769-96-42</a>
+      </div>
         <div class="nav__menu-block">
           <div class="nav__menu-wrapper">
           <input
@@ -137,6 +141,13 @@ export default {
 .nav__menu-block {
   display: flex;
   padding: 10px;
+}
+.header__info-phone--white {
+  display: flex;
+  align-items: center; 
+}
+.header__info--white {
+  color: black;
 }
 .nav__menu-wrapper {
   display: flex;

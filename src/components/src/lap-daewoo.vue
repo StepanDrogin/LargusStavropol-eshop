@@ -6,6 +6,11 @@
           Запчасти для Daewoo Nexia (с 1994г. - 2016г.) / Daewoo Matiz (с 1997г.
           - 2015г.)
         </h1>
+        <p class="lap__subtitlle">На сайте представлен не весь ассортимент, позвоните нам для уточнения интересующей вас запчасти! </p>
+        <div class="header__info-phone--white">
+        <img src="../../assets/img-header/phone-call.svg" alt="phone-call" />
+        <a class="header__info--white" href="tel:+79097699642">+7 (909) 769-96-42</a>
+      </div>
         <div class="nav__menu-block">
         <div class="nav__menu-wrapper">
           <input
