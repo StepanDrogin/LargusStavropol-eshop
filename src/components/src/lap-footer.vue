@@ -5,7 +5,7 @@
       <p class="footer__shop">© Moskvich Auto Stavropol, 2020</p>
     </div>
     <div class="footer__info">
-      <div class="footer__info-phone">
+      <div id="phone__ancher" class="footer__info-phone">
         <img src="../../assets/img-header/phone-call.svg" alt="phone-call" />
         <a class="footer__info-subtitle" href="tel:+79097699642">+7 (909) 769-96-42</a>
       </div>

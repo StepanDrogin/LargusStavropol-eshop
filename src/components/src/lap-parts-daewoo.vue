@@ -3,7 +3,7 @@
     <p class="lap-part-name">{{ daewoo_data.name }}</p>
     <img
       class="lap__part-img"
-      :src="require('../../assets/lap-card/' + daewoo_data.image)"
+      :src="require('../../assets/daewoo-img/' + daewoo_data.image)"
       alt="auto-part"
     />
   </div>

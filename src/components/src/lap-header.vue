@@ -58,7 +58,7 @@
         <a class="ancher" href="#catalog__ancher">
           <p class="nav__menu-item">Каталог</p>
         </a>
-        <a class="ancher" href="#advantages__anchor">
+        <a class="ancher" href="#phone__ancher">
           <p class="nav__menu-item">Контакты</p>
         </a>
         <a class="ancher" href="#advantages__anchor">

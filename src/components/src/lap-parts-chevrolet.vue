@@ -3,7 +3,7 @@
     <p class="lap-part-name">{{ chevrolet_data.name }}</p>
     <img
       class="lap__part-img"
-      :src="require('../../assets/lap-card/' + chevrolet_data.image)"
+      :src="require('../../assets/chevrolet-img/' + chevrolet_data.image)"
       alt="auto-part"
     />
   </div>
