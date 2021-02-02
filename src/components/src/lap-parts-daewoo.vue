@@ -1,47 +1,17 @@
 <template>
   <div class="lap__part">
-    <lap-popup
-      v-if="isInfoPopupVisible"
-      rightBtnTitle="Добавить в корзину"
-      @closePopup="closeInfoPopup"
-      @rightBtnAction="addToCart"
-    >
-      <img
-        class="lap__part-img"
-        :src="require('../../assets/lap-card/' + daewoo_data.image)"
-        alt="auto-part"
-      />
-      <div class="popup__box">
-        <p class="lap-part-name">Название: {{ daewoo_data.name }}</p>
-        <p class="lap-part-name">
-          Категория товара: {{ daewoo_data.category }}
-        </p>
-        <p class="lap-part-name">
-          Каталожный номер: {{ daewoo_data.catalogNumber }}
-        </p>
-        <p class="popup__price">Стоимость: {{ daewoo_data.price }} &#8381;</p>
-      </div>
-    </lap-popup>
     <p class="lap-part-name">{{ daewoo_data.name }}</p>
     <img
       class="lap__part-img"
       :src="require('../../assets/lap-card/' + daewoo_data.image)"
       alt="auto-part"
     />
-    <div class="lap__part-info">
-      <p class="lap__part-price">{{ daewoo_data.price }} &#8381;</p>
-      <button class="part-info" @click="showPopupInfo">
-        Показать подробнее
-      </button>
-      <button class="add__button" @click="addToCart">Добавить</button>
-    </div>
   </div>
 </template>
 
 <script>
-import lapPopup from "../popup/lap-popup.vue";
 export default {
-  components: { lapPopup },
+  components: {},
   name: "lap-parts-daewoo",
   props: {
     daewoo_data: {
@@ -51,24 +21,8 @@ export default {
       },
     },
   },
-  data() {
-    return {
-      isInfoPopupVisible: false,
-    };
-  },
   mounted() {
     this.$set(this.daewoo_data, "quantity", 1);
-  },
-  methods: {
-    addToCart() {
-      this.$emit("addToCart", this.daewoo_data);
-    },
-    showPopupInfo() {
-      this.isInfoPopupVisible = true;
-    },
-    closeInfoPopup() {
-      this.isInfoPopupVisible = false;
-    },
   },
 };
 </script>

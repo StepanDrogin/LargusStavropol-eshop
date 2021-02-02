@@ -1,49 +1,17 @@
 <template>
   <div class="lap__part">
-    <lap-popup
-      v-if="isInfoPopupVisible"
-      rightBtnTitle="Добавить в корзину"
-      @closePopup="closeInfoPopup"
-      @rightBtnAction="addToCart"
-    >
-      <img
-        class="lap__part-img"
-        :src="require('../../assets/lap-card/' + chevrolet_data.image)"
-        alt="auto-part"
-      />
-      <div class="popup__box">
-        <p class="lap-part-name">Название: {{ chevrolet_data.name }}</p>
-        <p class="lap-part-name">
-          Категория товара: {{ chevrolet_data.category }}
-        </p>
-        <p class="lap-part-name">
-          Каталожный номер: {{ chevrolet_data.catalogNumber }}
-        </p>
-        <p class="popup__price">
-          Стоимость: {{ chevrolet_data.price }} &#8381;
-        </p>
-      </div>
-    </lap-popup>
     <p class="lap-part-name">{{ chevrolet_data.name }}</p>
     <img
       class="lap__part-img"
       :src="require('../../assets/lap-card/' + chevrolet_data.image)"
       alt="auto-part"
     />
-    <div class="lap__part-info">
-      <p class="lap__part-price">{{ chevrolet_data.price }} &#8381;</p>
-      <button class="part-info" @click="showPopupInfo">
-        Показать подробнее
-      </button>
-      <button class="add__button" @click="addToCart">Добавить</button>
-    </div>
   </div>
 </template>
 
 <script>
-import lapPopup from "../popup/lap-popup.vue";
 export default {
-  components: { lapPopup },
+  components: {},
   name: "lap-parts-chevrolet",
   props: {
     chevrolet_data: {
@@ -51,22 +19,6 @@ export default {
       default() {
         return {};
       },
-    },
-  },
-  data() {
-    return {
-      isInfoPopupVisible: false,
-    };
-  },
-  methods: {
-    addToCart() {
-      this.$emit("addToCart", this.chevrolet_data);
-    },
-    showPopupInfo() {
-      this.isInfoPopupVisible = true;
-    },
-    closeInfoPopup() {
-      this.isInfoPopupVisible = false;
     },
   },
   mounted() {
@@ -86,10 +38,12 @@ export default {
 }
 .lap-part-name {
   text-align: center;
+  max-width: 280px;
+  min-height: 42px;
 }
 .lap__part-img {
-  height: 180px;
-  width: 257px;
+  height: 250px;
+  width: 280px;
   border-top: 2px solid #171717;
   border-bottom: 2px solid #171717;
   box-sizing: border-box;
@@ -102,7 +56,7 @@ export default {
 }
 .lap__part {
   background: rgb(233, 228, 227);
-  margin: 20px 20px 20px 20px;
+  margin: 5px 0px 20px 17px;
   border: 2px solid #171717;
   box-sizing: border-box;
   border-radius: 4px;

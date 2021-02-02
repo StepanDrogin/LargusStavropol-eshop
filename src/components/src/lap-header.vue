@@ -64,16 +64,6 @@
         <a class="ancher" href="#advantages__anchor">
           <p class="nav__menu-item">Преимущества</p>
         </a>
-        <router-link :to="{ name: 'cart', params: { cart_data: CART } }">
-          <div class="cart__wrapper">
-            <img
-              class="nav__menu-cart"
-              src="../../assets/img-header/shop-cart.svg"
-              alt="shop-cart"
-            />
-            <p class="cart__count">{{ CART.length }}</p>
-          </div>
-        </router-link>
       </div>
     </div>
   </div>
